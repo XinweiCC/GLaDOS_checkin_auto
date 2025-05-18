@@ -26,8 +26,8 @@ if __name__ == '__main__':
         state =  requests.get(url2,headers={'cookie': cookie ,'referer': referer,'origin':origin,'user-agent':useragent})
     #--------------------------------------------------------------------------------------------------------#  
         time = state.json()['data']['leftDays']
-        time = str(time)
-        time = time.split('.')[0]
+        time_str = str(time)
+        time = time_str.split('.')[0]
         email = state.json()['data']['email']
         if 'message' in checkin.text:
             mess = checkin.json()['message']
